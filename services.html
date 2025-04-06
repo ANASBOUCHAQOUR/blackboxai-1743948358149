@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | SprayPros.net</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #000;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translateX(6px);
+        }
+        .open .hamburger-middle {
+            display: none;
+        }
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translateX(-6px);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                     alt="SprayPros Logo" 
+                     class="h-10 w-10 rounded-full object-cover">
+                <a href="index.html" class="text-xl font-bold text-green-600">SprayPros.net</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-green-600">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600">Services</a>
+                <a href="articles.html" class="text-gray-700 hover:text-green-600">Articles</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+            
+            <!-- Auth Buttons -->
+            <div class="hidden md:flex space-x-4">
+                <a href="login.html" class="px-4 py-2 text-gray-700 hover:text-green-600">Sign In</a>
+                <a href="register.html" class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition">Register</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-white absolute w-full px-6 pb-4 shadow-md">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-green-600 py-2">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600 py-2">Services</a>
+                <a href="articles.html" class="text-gray-700 hover:text-green-600 py-2">Articles</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 py-2">Contact</a>
+                <div class="pt-4 border-t border-gray-200">
+                    <a href="login.html" class="block text-center px-4 py-2 text-gray-700 hover:text-green-600">Sign In</a>
+                    <a href="register.html" class="block text-center px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="bg-gradient-to-r from-blue-500 to-green-400 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Professional Services</h1>
+            <p class="text-xl md:text-2xl mb-8">Quality spray services for your home and business</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pest Control -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                         alt="Pest Control" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-green-600 mb-2">
+                            <i class="fas fa-pest-control text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Pest Control</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive solutions for all types of pests including rodents, insects, and termites.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Residential & Commercial</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Eco-friendly options</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Preventative treatments</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-green-600 font-medium hover:underline">Find Providers →</a>
+                    </div>
+                </div>
+
+                <!-- Home Disinfection -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                         alt="Home Disinfection" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-green-600 mb-2">
+                            <i class="fas fa-spray-can text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Home Disinfection</h3>
+                        <p class="text-gray-600 mb-4">Professional disinfection services to keep your home safe and germ-free.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Hospital-grade disinfectants</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Whole-home coverage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Regular maintenance plans</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-green-600 font-medium hover:underline">Find Providers →</a>
+                    </div>
+                </div>
+
+                <!-- Garden Spray -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                         alt="Garden Spray" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-green-600 mb-2">
+                            <i class="fas fa-leaf text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Garden Spray</h3>
+                        <p class="text-gray-600 mb-4">Specialized treatments for your garden and outdoor spaces.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Pest and disease control</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Fertilizer applications</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Seasonal maintenance</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="text-green-600 font-medium hover:underline">Find Providers →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Providers -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Service Providers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                             alt="Provider Logo" 
+                             class="h-16 w-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">GreenSpray Co.</h3>
+                            <div class="flex items-center">
+                                <div class="text-yellow-400">
+                                    ★★★★☆
+                                </div>
+                                <span class="text-gray-600 ml-2">(128 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Specializing in eco-friendly pest control solutions for homes and businesses.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Pest Control</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Disinfection</span>
+                        <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Commercial</span>
+                    </div>
+                    <a href="#" class="text-green-600 font-medium hover:underline">View Profile →</a>
+                </div>
+                <!-- Repeat similar structure for other providers -->
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">View All Providers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Find Your Spray Service Professional?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Connect with trusted, vetted professionals in your area today.</p>
+            <a href="register.html" class="px-8 py-4 bg-green-600 text-white rounded-lg text-lg font-medium hover:bg-green-700 transition">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">SprayPros.net</h3>
+                    <p>Connecting you with the best spray service professionals in your area.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-green-400">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-green-400">Pest Control</a></li>
+                        <li><a href="services.html" class="hover:text-green-400">Disinfection</a></li>
+                        <li><a href="services.html" class="hover:text-green-400">Garden Spray</a></li>
+                        <li><a href="services.html" class="hover:text-green-400">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 SprayPros.net. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
