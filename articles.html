@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles & Guides | SprayPros.net</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background: #000;
+            transform: rotate(0);
+            transition: all 0.5s;
+        }
+        .hamburger-middle {
+            transform: translateY(7px);
+        }
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translateX(6px);
+        }
+        .open .hamburger-middle {
+            display: none;
+        }
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translateX(-6px);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                     alt="SprayPros Logo" 
+                     class="h-10 w-10 rounded-full object-cover">
+                <a href="index.html" class="text-xl font-bold text-green-600">SprayPros.net</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-green-600">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600">Services</a>
+                <a href="articles.html" class="text-gray-700 hover:text-green-600">Articles</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+            
+            <!-- Auth Buttons -->
+            <div class="hidden md:flex space-x-4">
+                <a href="login.html" class="px-4 py-2 text-gray-700 hover:text-green-600">Sign In</a>
+                <a href="register.html" class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition">Register</a>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="menu" class="hidden md:hidden bg-white absolute w-full px-6 pb-4 shadow-md">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-green-600 py-2">Home</a>
+                <a href="services.html" class="text-gray-700 hover:text-green-600 py-2">Services</a>
+                <a href="articles.html" class="text-gray-700 hover:text-green-600 py-2">Articles</a>
+                <a href="contact.html" class="text-gray-700 hover:text-green-600 py-2">Contact</a>
+                <div class="pt-4 border-t border-gray-200">
+                    <a href="login.html" class="block text-center px-4 py-2 text-gray-700 hover:text-green-600">Sign In</a>
+                    <a href="register.html" class="block text-center px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Articles Hero -->
+    <section class="bg-gradient-to-r from-blue-500 to-green-400 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Articles & Guides</h1>
+            <p class="text-xl md:text-2xl mb-8">Expert advice and tips for all your spray service needs</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Articles Grid -->
+            <div class="lg:w-2/3">
+                <!-- Featured Article -->
+                <div class="mb-12 bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                         alt="Featured Article" 
+                         class="w-full h-64 md:h-80 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Featured</span>
+                            <span class="text-gray-500 ml-4">June 15, 2023</span>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">The Complete Guide to Pest Prevention</h2>
+                        <p class="text-gray-600 mb-6">Learn how to protect your home from common pests with these expert-approved strategies and techniques that will save you time and money in the long run.</p>
+                        <a href="#" class="text-green-600 font-medium hover:underline">Read Full Article →</a>
+                    </div>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Article 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                             alt="Article Image" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-green-600 text-sm font-medium">Pest Control</span>
+                                <span class="text-gray-500 text-sm ml-4">May 28, 2023</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">5 Signs You Need Professional Pest Control</h3>
+                            <p class="text-gray-600 mb-4">Discover the warning signs that indicate it's time to call in the professionals for your pest problems.</p>
+                            <a href="#" class="text-green-600 font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                             alt="Article Image" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-green-600 text-sm font-medium">Disinfection</span>
+                                <span class="text-gray-500 text-sm ml-4">April 15, 2023</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">How Often Should You Disinfect Your Home?</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive guide to creating a disinfection schedule that keeps your family safe without overdoing it.</p>
+                            <a href="#" class="text-green-600 font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                             alt="Article Image" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-green-600 text-sm font-medium">Garden Care</span>
+                                <span class="text-gray-500 text-sm ml-4">March 22, 2023</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Organic Pest Control for Your Garden</h3>
+                            <p class="text-gray-600 mb-4">Natural solutions to protect your plants without harmful chemicals that could affect your family or pets.</p>
+                            <a href="#" class="text-green-600 font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                             alt="Article Image" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-2">
+                                <span class="text-green-600 text-sm font-medium">Commercial</span>
+                                <span class="text-gray-500 text-sm ml-4">February 10, 2023</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Choosing the Right Disinfection Service for Your Business</h3>
+                            <p class="text-gray-600 mb-4">What to look for when selecting a commercial disinfection provider to ensure safety for employees and customers.</p>
+                            <a href="#" class="text-green-600 font-medium hover:underline">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <a href="#" class="px-4 py-2 border rounded-lg text-green-600 border-green-600 hover:bg-green-50">Previous</a>
+                        <a href="#" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">1</a>
+                        <a href="#" class="px-4 py-2 border rounded-lg text-green-600 hover:bg-green-50">2</a>
+                        <a href="#" class="px-4 py-2 border rounded-lg text-green-600 hover:bg-green-50">3</a>
+                        <a href="#" class="px-4 py-2 border rounded-lg text-green-600 border-green-600 hover:bg-green-50">Next</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3">
+                <!-- Categories -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Categories</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex justify-between items-center text-gray-700 hover:text-green-600">
+                                <span>Pest Control</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center text-gray-700 hover:text-green-600">
+                                <span>Home Disinfection</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">8</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center text-gray-700 hover:text-green-600">
+                                <span>Garden Care</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center text-gray-700 hover:text-green-600">
+                                <span>Commercial Services</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex justify-between items-center text-gray-700 hover:text-green-600">
+                                <span>DIY Solutions</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">7</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Popular Articles -->
+                <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h3 class="text-xl font-bold mb-4">Popular Articles</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="flex items-start group">
+                                <div class="flex-shrink-0 mr-4">
+                                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                                         alt="Article Thumbnail" 
+                                         class="h-16 w-16 object-cover rounded">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium group-hover:text-green-600">How to Identify Common Household Pests</h4>
+                                    <p class="text-sm text-gray-500">June 2, 2023</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-start group">
+                                <div class="flex-shrink-0 mr-4">
+                                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                                         alt="Article Thumbnail" 
+                                         class="h-16 w-16 object-cover rounded">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium group-hover:text-green-600">The Benefits of Regular Home Disinfection</h4>
+                                    <p class="text-sm text-gray-500">May 18, 2023</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-start group">
+                                <div class="flex-shrink-0 mr-4">
+                                    <img src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+                                         alt="Article Thumbnail" 
+                                         class="h-16 w-16 object-cover rounded">
+                                </div>
+                                <div>
+                                    <h4 class="font-medium group-hover:text-green-600">Choosing Between Chemical and Organic Pest Control</h4>
+                                    <p class="text-sm text-gray-500">April 30, 2023</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+                    <p class="text-gray-600 mb-4">Subscribe to our newsletter for the latest articles and tips.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">SprayPros.net</h3>
+                    <p>Connecting you with the best spray service professionals in your area.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-green-400">About Us</a></li>
+                        <li><a href="#" class="hover:text-green-400">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="hover:text-green-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-green-400">Pest Control</a></li>
+                        <li><a href="services.html" class="hover:text-green-400">Disinfection</a></li>
+                        <li><a href="services.html" class="hover:text-green-400">Garden Spray</a></li>
+                        <li><a href="services.html" class="hover:text-green-400">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-green-400"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 SprayPros.net. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
